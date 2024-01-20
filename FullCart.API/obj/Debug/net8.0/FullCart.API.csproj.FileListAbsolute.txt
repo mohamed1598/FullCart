@@ -76,8 +76,6 @@ D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\Microsoft.Exten
 D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\FullCart.Core.dll
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\FullCart.Infrastracture.dll
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\FullCart.Infrastracture.pdb
 D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\FullCart.Core.pdb
 D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\Humanizer.dll
 D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -148,3 +146,5 @@ D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\zh-Hant\Microso
 D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\AutoMapper.dll
 D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\FullCart.Infrastructure.dll
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\FullCart.Infrastructure.pdb

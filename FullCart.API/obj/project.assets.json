@@ -1661,7 +1661,7 @@
           "bin/placeholder/FullCart.Core.dll": {}
         }
       },
-      "FullCart.Infrastracture/1.0.0": {
+      "FullCart.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -1670,10 +1670,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.1"
         },
         "compile": {
-          "bin/placeholder/FullCart.Infrastracture.dll": {}
+          "bin/placeholder/FullCart.Infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/FullCart.Infrastracture.dll": {}
+          "bin/placeholder/FullCart.Infrastructure.dll": {}
         }
       }
     }
@@ -4508,16 +4508,16 @@
       "path": "../FullCart.Core/FullCart.Core.csproj",
       "msbuildProject": "../FullCart.Core/FullCart.Core.csproj"
     },
-    "FullCart.Infrastracture/1.0.0": {
+    "FullCart.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../FullCart.Infrastracture/FullCart.Infrastracture.csproj",
-      "msbuildProject": "../FullCart.Infrastracture/FullCart.Infrastracture.csproj"
+      "path": "../FullCart.Infrastracture/FullCart.Infrastructure.csproj",
+      "msbuildProject": "../FullCart.Infrastracture/FullCart.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
-      "FullCart.Infrastracture >= 1.0.0",
+      "FullCart.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.1",
       "Swashbuckle.AspNetCore >= 6.5.0"
@@ -4556,8 +4556,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastracture.csproj": {
-              "projectPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastracture.csproj"
+            "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj": {
+              "projectPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj"
             }
           }
         }

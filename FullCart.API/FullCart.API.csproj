@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FullCart.Infrastracture\FullCart.Infrastracture.csproj" />
+    <ProjectReference Include="..\FullCart.Infrastracture\FullCart.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

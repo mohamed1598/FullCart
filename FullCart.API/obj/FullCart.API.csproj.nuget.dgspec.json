@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastracture.csproj": {
-                "projectPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastracture.csproj"
+              "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj": {
+                "projectPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj"
               }
             }
           }
@@ -157,12 +157,12 @@
         }
       }
     },
-    "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastracture.csproj": {
+    "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastracture.csproj",
-        "projectName": "FullCart.Infrastracture",
-        "projectPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastracture.csproj",
+        "projectUniqueName": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj",
+        "projectName": "FullCart.Infrastructure",
+        "projectPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Mohamed Elshafey\\.nuget\\packages\\",
         "outputPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\obj\\",
         "projectStyle": "PackageReference",

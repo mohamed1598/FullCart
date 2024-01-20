@@ -2,9 +2,10 @@ using FullCart.API.Helpers;
 using FullCart.API.Middlewares;
 using FullCart.Core.Entities;
 using FullCart.Core.Interfaces;
-using FullCart.Infrastracture.Data;
-using FullCart.Infrastracture.Seeds;
-using FullCart.Infrastracture.Services;
+using FullCart.Infrastructure.Data;
+using FullCart.Infrastructure.Repositories;
+using FullCart.Infrastructure.Seeds;
+using FullCart.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -36,6 +37,8 @@ builder.Services.AddAuthentication(options => {
                     };
                 });
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddCors(opt =>
 {

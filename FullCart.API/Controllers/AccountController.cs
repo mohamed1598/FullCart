@@ -34,7 +34,7 @@ namespace FullCart.API.Controllers
             var email = User.FindFirstValue(ClaimTypes.Email)!;
             var user = await _userManager.FindByEmailAsync(email);
             var userDto = _mapper.Map<UserDto>(user);
-            userDto.Token = _tokenService.CreateToken(user);
+            userDto.Token = _tokenService.CreateToken(user!);
             return userDto;
         }
 

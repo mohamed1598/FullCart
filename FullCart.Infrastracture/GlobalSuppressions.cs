@@ -6,3 +6,6 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Style", "IDE0290:Use primary constructor", Justification = "<Pending>", Scope = "member", Target = "~M:FullCart.Infrastructure.Repositories.GenericRepository`1.#ctor(FullCart.Infrastracture.Data.ApplicationDbContext)")]
+[assembly: SuppressMessage("Style", "IDE0290:Use primary constructor", Justification = "<Pending>", Scope = "member", Target = "~M:FullCart.Infrastructure.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{FullCart.Infrastructure.Data.ApplicationDbContext})")]
+[assembly: SuppressMessage("Style", "IDE0290:Use primary constructor", Justification = "<Pending>", Scope = "member", Target = "~M:FullCart.Infrastructure.Data.UnitOfWork.#ctor(FullCart.Infrastructure.Data.ApplicationDbContext)")]
+[assembly: SuppressMessage("Style", "IDE0290:Use primary constructor", Justification = "<Pending>", Scope = "member", Target = "~M:FullCart.Infrastructure.Repositories.GenericRepository`1.#ctor(FullCart.Infrastructure.Data.ApplicationDbContext)")]

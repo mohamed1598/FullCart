@@ -5,9 +5,9 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FullCart.API", "FullCart.API\FullCart.API.csproj", "{95F7C1C1-A48F-4EBF-B9DE-32A2C17ABA04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCart.Core", "FullCart.Core\FullCart.Core.csproj", "{5B3DF4AB-EDE7-4149-9DDD-2E67878F5AA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FullCart.Core", "FullCart.Core\FullCart.Core.csproj", "{5B3DF4AB-EDE7-4149-9DDD-2E67878F5AA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCart.Infrastracture", "FullCart.Infrastracture\FullCart.Infrastracture.csproj", "{D0B05467-0496-42DA-80DF-708374F4058B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FullCart.Infrastructure", "FullCart.Infrastracture\FullCart.Infrastructure.csproj", "{D0B05467-0496-42DA-80DF-708374F4058B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

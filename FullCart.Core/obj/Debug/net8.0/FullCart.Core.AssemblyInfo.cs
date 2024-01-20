@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FullCart.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41de051a5c64b2a7076326a7e652ef5b753c8156")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5059576c18920c9097a6019a19b7dbbbb438486")]
 [assembly: System.Reflection.AssemblyProductAttribute("FullCart.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FullCart.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

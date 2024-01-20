@@ -9,7 +9,7 @@
       "FullCart.API/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "FullCart.Infrastracture": "1.0.0",
+          "FullCart.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.1",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.1",
           "Swashbuckle.AspNetCore": "6.5.0"
@@ -984,14 +984,14 @@
           "FullCart.Core.dll": {}
         }
       },
-      "FullCart.Infrastracture/1.0.0": {
+      "FullCart.Infrastructure/1.0.0": {
         "dependencies": {
           "FullCart.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.1"
         },
         "runtime": {
-          "FullCart.Infrastracture.dll": {}
+          "FullCart.Infrastructure.dll": {}
         }
       }
     }
@@ -1602,7 +1602,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "FullCart.Infrastracture/1.0.0": {
+    "FullCart.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
