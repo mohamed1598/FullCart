@@ -1,3 +1,4 @@
+using FullCart.API.Helpers;
 using FullCart.Core.Entities;
 using FullCart.Core.Interfaces;
 using FullCart.Infrastracture.Data;
@@ -29,6 +30,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     };
                 });
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy("CorsPolicy", policy =>
