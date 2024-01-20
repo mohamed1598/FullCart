@@ -1,0 +1,17 @@
+
+.left{
+    height: 100vh; 
+    /* background-color: #DADCDD; */
+}
+.left img{
+    width: 80%;
+}
+.right{
+    height: 100vh;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .left{
+        display: none;
+    }
+  }
