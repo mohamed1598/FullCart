@@ -8,7 +8,8 @@ namespace FullCart.API.Helpers
     {
         public MappingProfile()
         {
-            CreateMap<RegisterDto, AppUser>();
+            CreateMap<RegisterDto, AppUser>()
+                .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Email));
             CreateMap<AppUser, UserDto>();
         }
     }
