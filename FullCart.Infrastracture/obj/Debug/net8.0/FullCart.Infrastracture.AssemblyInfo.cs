@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FullCart.Infrastracture")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41de051a5c64b2a7076326a7e652ef5b753c8156")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73aefc88574e9a1e2cbaa4e2c406d7242b76a01e")]
 [assembly: System.Reflection.AssemblyProductAttribute("FullCart.Infrastracture")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FullCart.Infrastracture")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
