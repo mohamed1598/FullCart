@@ -11,6 +11,9 @@ namespace FullCart.API.Helpers
             CreateMap<RegisterDto, AppUser>()
                 .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Email));
             CreateMap<AppUser, UserDto>();
+
+            CreateMap<BrandDto,Brand>().ReverseMap();
+            CreateMap<CategoryDto,Category>().ReverseMap();
         }
     }
 }
