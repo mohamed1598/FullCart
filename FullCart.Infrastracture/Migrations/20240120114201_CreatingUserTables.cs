@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace FullCart.Infrastracture.Migrations
+namespace FullCart.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class CreatingUserTables : Migration

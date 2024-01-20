@@ -10,7 +10,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FullCart.Infrastracture.Services
+namespace FullCart.Infrastructure.Services
 {
     public class TokenService : ITokenService
     {

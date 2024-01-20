@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FullCart.Infrastracture.Seeds
+namespace FullCart.Infrastructure.Seeds
 {
     public static class DefaultUsers
     {

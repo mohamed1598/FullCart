@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4ixV0r4yYfjo1t7NwFfa1W61F/Hay8g216HLq7uuYMQqQj1qfcxs75YIb+NqyH7pDAF2C3ET9w4aDRzcy4SSRw==",
+  "dgSpecHash": "dxTD8n9/s0OLzERoB5Jxn3jIwE9vNRX8WVLgRwH2BZbsLsh6xzF+Dc6adMREmlGpdsbRd7UkEoqgU4yP1OI+yA==",
   "success": true,
-  "projectFilePath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastracture.csproj",
+  "projectFilePath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mohamed Elshafey\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Mohamed Elshafey\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
