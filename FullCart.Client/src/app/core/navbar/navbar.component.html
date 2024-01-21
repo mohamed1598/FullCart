@@ -1,0 +1,62 @@
+<!-- <div
+    class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 px-md-4 bg-white border-bottom shadow-sm">
+    <img src="assets/images/logo.png" alt="" srcset="" style="max-height: 70px;" class="logo">
+    <nav class="my-2 my-md-0 mr-md-3" style="font-size: larger;">
+        <a [routerLink]="['/']" class="p-2 text-dark" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a class="p-2 text-dark" routerLink="/shop" routerLinkActive="active">Shop</a>
+        <a class="p-2 text-dark" routerLink="/test-error" routerLinkActive="active">Errors</a>
+    </nav>
+    <div class="d-flex align-items-center">
+        <ng-container *ngIf="(currentUser$ |async) === null">
+            <a class="btn btn-outline-primary mx-2" routerLink="/account/login">Login</a>
+            <a class="btn btn-outline-primary mr-3" routerLink="/account/register">Sign up</a>
+        </ng-container>
+        <ng-container *ngIf="(currentUser$ |async)">
+            <div class="dropdown ml-3 mr-5" dropdown>
+                <a class="dropdown-toggle" style="cursor: pointer;" dropdownToggle>
+                    <strong>Welcome {{(currentUser$ | async)!.fullName}}</strong>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right px-3" style="cursor: pointer;" *dropdownMenu>
+                    <a routerLink="/basket" class="drop-down-item d-block py-1">
+                        <i class="fa fa-shopping-cart mr-3"></i> View Basket
+                    </a>
+                    <a routerLink="/orders" class="drop-down-item d-block py-1">
+                        <i class="fa fa-history mr-3"></i> View Orders
+                    </a>
+                    <a (click)="logout()" class="drop-down-item d-block py-1">
+                        <i  class="fa fa-sign-out mr-3"></i> Logout
+                    </a>
+                </div>
+            </div>
+        </ng-container>
+
+    </div>
+</div> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="(currentUser$ |async)">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/">FullCart</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" [routerLink]="['/']" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}">Brand</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/category">Category</a>
+                </li>
+
+            </ul>
+            <div class="d-flex align-items-center justify-content-between">
+                <strong>Welcome {{(currentUser$ | async)!.fullName}}</strong>
+                <a (click)="logout()" class="mx-2 btn btn-outline-danger">
+                    <i class="fa fa-sign-out mr-3"></i> Logout
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

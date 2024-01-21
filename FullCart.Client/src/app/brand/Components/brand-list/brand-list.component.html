@@ -1,0 +1,46 @@
+<!-- src/app/brand-list/brand-list.component.html -->
+<div class="container mt-4">
+    <div class="d-flex align-items-center justify-content-between w-100">
+        <h2>Brand List</h2>
+        <button class="btn btn-primary btn-large" data-bs-toggle="modal" data-bs-target="#exampleModal">Create</button>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Picture</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let brand of brands">
+            <td>{{ brand.id }}</td>
+            <td>{{ brand.name }}</td>
+            <td>
+              <img [src]="imageUrl+brand.pictureUrl" alt="{{ brand.name }}" style="max-width: 50px; max-height: 50px;">
+            </td>
+            <td>
+              <button class="btn btn-primary btn-sm mx-2">Edit</button>
+              <button class="btn btn-danger btn-sm" (click)="deleteBrand(brand.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-brand-form></app-brand-form>
+        </div>
+      </div>
+    </div>
+  </div>
