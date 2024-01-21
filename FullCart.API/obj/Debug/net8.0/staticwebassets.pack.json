@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\27f7a4d4-7012-4fb8-ad9d-dd1dba0a737b.pdf",
+      "PackagePath": "staticwebassets\\images\\27f7a4d4-7012-4fb8-ad9d-dd1dba0a737b.pdf"
+    },
+    {
+      "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\2f8f528e-2489-47e5-9387-72c5c1030e27.jpg",
+      "PackagePath": "staticwebassets\\images\\2f8f528e-2489-47e5-9387-72c5c1030e27.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FullCart.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.FullCart.API.props",
+      "PackagePath": "build\\FullCart.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.FullCart.API.props",
+      "PackagePath": "buildMultiTargeting\\FullCart.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.FullCart.API.props",
+      "PackagePath": "buildTransitive\\FullCart.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

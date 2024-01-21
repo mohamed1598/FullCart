@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FullCart.API.Dtos;
+using FullCart.API.Dtos.InputModels;
 using FullCart.Core.Entities;
 
 namespace FullCart.API.Helpers
@@ -12,7 +13,7 @@ namespace FullCart.API.Helpers
                 .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Email));
             CreateMap<AppUser, UserDto>();
 
-            CreateMap<BrandDto,Brand>().ReverseMap();
+            CreateMap<BrandInputModel,Brand>();
             CreateMap<CategoryDto,Category>().ReverseMap();
         }
     }

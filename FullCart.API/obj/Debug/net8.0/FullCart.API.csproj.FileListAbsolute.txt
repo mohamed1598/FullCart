@@ -148,3 +148,4 @@ D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\AutoMapper.dll
 D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\FullCart.Infrastructure.dll
 D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\FullCart.Infrastructure.pdb
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.API\bin\Debug\net8.0\FullCart.API.staticwebassets.runtime.json

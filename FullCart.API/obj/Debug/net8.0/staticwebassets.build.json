@@ -1,11 +1,58 @@
 {
   "Version": 1,
-  "Hash": "nyRWWJ8Jjvix9zNTDFL+ACit0FkmmMnhow9gIq9TEIk=",
+  "Hash": "VzPcIn4mDY00YnLbkau4I/c4nIF7TbL6vA/jACLiXsc=",
   "Source": "FullCart.API",
   "BasePath": "_content/FullCart.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "FullCart.API\\wwwroot",
+      "Source": "FullCart.API",
+      "ContentRoot": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\",
+      "BasePath": "_content/FullCart.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\27f7a4d4-7012-4fb8-ad9d-dd1dba0a737b.pdf",
+      "SourceId": "FullCart.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\",
+      "BasePath": "_content/FullCart.API",
+      "RelativePath": "images/27f7a4d4-7012-4fb8-ad9d-dd1dba0a737b.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\27f7a4d4-7012-4fb8-ad9d-dd1dba0a737b.pdf"
+    },
+    {
+      "Identity": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\2f8f528e-2489-47e5-9387-72c5c1030e27.jpg",
+      "SourceId": "FullCart.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\",
+      "BasePath": "_content/FullCart.API",
+      "RelativePath": "images/2f8f528e-2489-47e5-9387-72c5c1030e27.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\2f8f528e-2489-47e5-9387-72c5c1030e27.jpg"
+    }
+  ]
 }

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FullCart.API.Dtos;
+using FullCart.API.Dtos.InputModels;
 using FullCart.Core.Consts;
 using FullCart.Core.Entities;
 using FullCart.Core.Interfaces;
@@ -12,7 +13,7 @@ namespace FullCart.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles =AppRoles.Admin)]
+    //[Authorize(Roles =AppRoles.Admin)]
     public class BrandsController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -30,14 +31,18 @@ namespace FullCart.API.Controllers
             var brands = await _unitOfWork.Repository<Brand>().GetAllAsync();
             return Ok(brands);
         }
-        [HttpPost]
-        public async Task<ActionResult<Brand>> CreateBrand(BrandDto brandDto)
+        [HttpPost, DisableRequestSizeLimit]
+        public async Task<ActionResult<Brand>> CreateBrand([FromForm]BrandInputModel brandInput)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-            var brand = _mapper.Map<Brand>(brandDto);
+            string pictureUrl = string.Empty;
+            if(brandInput.Picture != null) 
+                pictureUrl = await UploadFile(brandInput.Picture);
+            var brand = _mapper.Map<Brand>(brandInput);
+            brand.PictureUrl = pictureUrl;
             _unitOfWork.Repository<Brand>().Add(brand);
             await _unitOfWork.Complete();
             return Ok(brand);
@@ -49,6 +54,7 @@ namespace FullCart.API.Controllers
             {
                 return BadRequest();
             }
+
             var brand = await _unitOfWork.Repository<Brand>().GetByIdAsync(brandDto.Id);
             brand = _mapper.Map<Brand>(brandDto);
             await _unitOfWork.Complete();
@@ -62,6 +68,29 @@ namespace FullCart.API.Controllers
             _unitOfWork.Repository<Brand>().Delete(brand);
             await _unitOfWork.Complete();
             return Ok(true);
+        }
+        // Method to handle file upload
+        private async Task<string> UploadFile(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return null;
+            }
+
+            // Generate a unique file name
+            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+
+            // Define the file path
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", fileName);
+
+            // Save the file to the server
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+            // Return the file URL
+            return "/images/" + fileName;
         }
     }
 }

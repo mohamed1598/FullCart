@@ -7,7 +7,9 @@ using FullCart.Infrastructure.Repositories;
 using FullCart.Infrastructure.Seeds;
 using FullCart.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -40,11 +42,13 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
-builder.Services.AddCors(opt =>
+builder.Services.AddCors(options =>
 {
-    opt.AddPolicy("CorsPolicy", policy =>
+    options.AddPolicy("CorsPolicy", builder =>
     {
-        policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200");
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
     });
 });
 builder.Services.AddControllers();
@@ -68,6 +72,12 @@ builder.Services.AddSwaggerGen(c =>
     var securityRequirment = new OpenApiSecurityRequirement { { securitySchema, new[] { "Bearer" } } };
     c.AddSecurityRequirement(securityRequirment);
 });
+builder.Services.Configure<FormOptions>(o =>
+{
+    o.ValueLengthLimit = int.MaxValue;
+    o.MultipartBodyLengthLimit = int.MaxValue;
+    o.MemoryBufferThreshold = int.MaxValue;
+});
 
 var app = builder.Build();
 
@@ -89,7 +99,7 @@ var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityR
 var userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
 await DefaultRoles.SeedRolesAsync(roleManager);
 await DefaultUsers.SeedAdminUserAsync(userManager);
-
+app.UseStaticFiles();
 app.MapControllers();
 
 app.Run();
