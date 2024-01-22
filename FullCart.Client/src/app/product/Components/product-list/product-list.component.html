@@ -1,0 +1,43 @@
+<div class="container mt-4">
+    <div class="d-flex align-items-center justify-content-between w-100">
+        <h2>Product List</h2>
+        <button class="btn btn-primary btn-large" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="updateId(null)">Create</button>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Picture</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>
+              <img [src]="imageUrl+product.pictureUrl" alt="{{ product.name }}" style="max-width: 50px; max-height: 50px;">
+            </td>
+            <td>
+              <button class="btn btn-primary btn-sm mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal"  (click)="updateId(product.id)">Edit</button>
+              <button class="btn btn-danger btn-sm" (click)="deleteProduct(product.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <app-product-form [id]="selectedId"></app-product-form>
+        </div>
+      </div>
+    </div>
+  </div>

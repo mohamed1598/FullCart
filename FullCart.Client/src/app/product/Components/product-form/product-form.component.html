@@ -1,0 +1,16 @@
+<div class="container my-4">
+    <h2 class="text-center">{{id == null?"Insert":"Edit"}} Product</h2>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+      <app-text-input formControlName="name" [label]="'Name'"></app-text-input>
+      <app-text-input formControlName="price" [label]="'Price'"  [type]="'number'"></app-text-input>
+      <app-text-input formControlName="description" [label]="'description'"></app-text-input>
+      <div class="form-group my-4">
+        <label for="picture">Picture:</label>
+        <input type="file" class="form-control" id="picture" (change)="onFileSelected($event)" formControlName="picture" accept="image/*">
+        <div *ngIf="productForm.get('picture')!.hasError('required') && productForm.get('picture')!.touched">
+          Picture is required
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary form-control" [disabled]="productForm.invalid">{{id == null?"Insert":"Edit"}} Product</button>
+    </form>
+  </div>
