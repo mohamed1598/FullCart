@@ -34,7 +34,7 @@ namespace FullCart.API.Controllers
             var email = User.FindFirstValue(ClaimTypes.Email)!;
             var user = await _userManager.FindByEmailAsync(email);
             var userDto = _mapper.Map<UserDto>(user);
-            userDto.Token = _tokenService.CreateToken(user!);
+            userDto.Token = _tokenService.CreateToken(user, await GetRole(user));
             return userDto;
         }
 
@@ -52,7 +52,7 @@ namespace FullCart.API.Controllers
             var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
             if (!result.Succeeded) return Unauthorized(new ApiResponse(401));
             var userDto = _mapper.Map<UserDto>(user);
-            userDto.Token = _tokenService.CreateToken(user);
+            userDto.Token = _tokenService.CreateToken(user, await GetRole(user));
             return userDto;
         }
         [HttpPost("register")]
@@ -67,8 +67,12 @@ namespace FullCart.API.Controllers
             if (!result.Succeeded) return BadRequest(new ApiResponse(400));
             await _userManager.AddToRoleAsync(user, AppRoles.User);
             var userDto = _mapper.Map<UserDto>(user);
-            userDto.Token = _tokenService.CreateToken(user);
+            userDto.Token = _tokenService.CreateToken(user, await GetRole(user));
             return userDto;
+        }
+        private async Task<string> GetRole(AppUser user)
+        {
+            return (await _userManager.IsInRoleAsync(user, AppRoles.Admin))?AppRoles.Admin:AppRoles.User;
         }
     }
 }

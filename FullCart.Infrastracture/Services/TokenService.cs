@@ -22,12 +22,13 @@ namespace FullCart.Infrastructure.Services
             _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Token:Key"]!));
         }
 
-        public string CreateToken(AppUser user)
+        public string CreateToken(AppUser user,string role)
         {
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Email,user.Email!),
-                new Claim(ClaimTypes.GivenName,user.FullName)
+                new Claim(ClaimTypes.GivenName,user.FullName),
+                new Claim(ClaimTypes.Role,role)
             };
             var creds = new SigningCredentials(_key, SecurityAlgorithms.HmacSha512Signature);
             var tokenDescriptor = new SecurityTokenDescriptor
