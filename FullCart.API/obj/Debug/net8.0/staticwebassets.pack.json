@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\images\\2f8f528e-2489-47e5-9387-72c5c1030e27.jpg"
     },
     {
+      "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\3e31165a-eb48-4439-ad16-f28aef024bf2.jpg",
+      "PackagePath": "staticwebassets\\images\\3e31165a-eb48-4439-ad16-f28aef024bf2.jpg"
+    },
+    {
+      "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\fbb26417-53b6-4fcf-878a-a276adb2749b.jpg",
+      "PackagePath": "staticwebassets\\images\\fbb26417-53b6-4fcf-878a-a276adb2749b.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FullCart.API.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

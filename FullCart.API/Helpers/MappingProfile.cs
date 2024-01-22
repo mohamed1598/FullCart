@@ -5,7 +5,7 @@ using FullCart.Core.Entities;
 
 namespace FullCart.API.Helpers
 {
-    public class MappingProfile:Profile
+    public class MappingProfile : Profile
     {
         public MappingProfile()
         {
@@ -13,8 +13,9 @@ namespace FullCart.API.Helpers
                 .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Email));
             CreateMap<AppUser, UserDto>();
 
-            CreateMap<BrandInputModel,Brand>();
-            CreateMap<CategoryDto,Category>().ReverseMap();
+            CreateMap<BrandInputModel, Brand>();
+            CreateMap<CategoryDto, Category>().ReverseMap();
+            CreateMap<CategoryInputModel, Category>();
         }
     }
 }

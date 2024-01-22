@@ -43,6 +43,10 @@ namespace FullCart.Infrastructure.Repositories
         {
             return await _context.Set<T>().FindAsync(id);
         }
+        public async Task<T?> GetByIdAsNoTrackingAsync(int id)
+        {
+            return await _context.Set<T>().AsNoTracking().FirstOrDefaultAsync(e => e.Id == id);
+        }
 
         public async Task<T?> GetEntityWithSpec(ISpecifications<T> spec)
         {

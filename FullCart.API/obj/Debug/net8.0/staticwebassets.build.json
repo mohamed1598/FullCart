@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VzPcIn4mDY00YnLbkau4I/c4nIF7TbL6vA/jACLiXsc=",
+  "Hash": "amGTOquD7KqyRA2jEKzZT41xBzq3YCVCTGi03QEhSZY=",
   "Source": "FullCart.API",
   "BasePath": "_content/FullCart.API",
   "Mode": "Default",
@@ -53,6 +53,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\2f8f528e-2489-47e5-9387-72c5c1030e27.jpg"
+    },
+    {
+      "Identity": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\3e31165a-eb48-4439-ad16-f28aef024bf2.jpg",
+      "SourceId": "FullCart.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\",
+      "BasePath": "_content/FullCart.API",
+      "RelativePath": "images/3e31165a-eb48-4439-ad16-f28aef024bf2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\3e31165a-eb48-4439-ad16-f28aef024bf2.jpg"
+    },
+    {
+      "Identity": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\fbb26417-53b6-4fcf-878a-a276adb2749b.jpg",
+      "SourceId": "FullCart.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\",
+      "BasePath": "_content/FullCart.API",
+      "RelativePath": "images/fbb26417-53b6-4fcf-878a-a276adb2749b.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\fbb26417-53b6-4fcf-878a-a276adb2749b.jpg"
     }
   ]
 }
