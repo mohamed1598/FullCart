@@ -11,10 +11,14 @@ import { environment } from 'src/environments/environment';
 export class BrandListComponent {
   brands: IBrand[] = [];
   imageUrl = environment.imageUrl;
+  selectedId : number|null = null;
   constructor(private brandService: BrandService) { }
 
   ngOnInit(): void {
     this.updateBrandsList();
+  }
+  updateId(id:number|null){
+    this.selectedId = id
   }
   updateBrandsList(){
     this.brandService.GetAll().subscribe({
@@ -29,5 +33,17 @@ export class BrandListComponent {
     }
     );
   }
-  deleteBrand(id: number) { }
+  deleteBrand(id: number) { 
+    this.brandService.Delete(id).subscribe({
+      next:
+        (response: boolean | any) => {
+          this.updateBrandsList();
+        },
+      error:
+        error => {
+          console.log(error)
+        }
+    }
+    );
+  }
 }

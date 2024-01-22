@@ -1,5 +1,5 @@
 <div class="container my-4">
-    <h2 class="text-center">Insert Category</h2>
+    <h2 class="text-center">{{id == null?"Insert":"Edit"}} Category</h2>
     <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
       <app-text-input formControlName="name" [label]="'Name'"></app-text-input>
       <div class="form-group my-4">
@@ -9,6 +9,6 @@
           Picture is required
         </div>
       </div>
-      <button type="submit" class="btn btn-primary form-control" [disabled]="categoryForm.invalid">Insert Brand</button>
+      <button type="submit" class="btn btn-primary form-control" [disabled]="categoryForm.invalid">{{id == null?"Insert":"Edit"}} Category</button>
     </form>
   </div>

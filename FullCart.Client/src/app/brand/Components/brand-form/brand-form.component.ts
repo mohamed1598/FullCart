@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IBrand } from 'src/app/models/brand';
 import { BrandService } from '../../brand.service';
@@ -9,10 +9,11 @@ import { BrandService } from '../../brand.service';
   styleUrls: ['./brand-form.component.css']
 })
 export class BrandFormComponent {
+  @Input() id: number | null = null;
   brandForm: FormGroup;
   selectedFile: File | null = null; // Track the selected file
 
-  constructor(private fb: FormBuilder, private brandService:BrandService) {
+  constructor(private fb: FormBuilder, private brandService: BrandService) {
     this.brandForm = this.fb.group({
       name: ['', Validators.required],
       picture: [null, Validators.required]
@@ -22,18 +23,21 @@ export class BrandFormComponent {
   onSubmit(): void {
     let formData = new FormData();
     console.log(this.brandForm.value);
-    
     formData.append('name', this.brandForm.get('name')!.value);
-    console.log(formData);
-
     if (this.selectedFile) {
       formData.append('picture', this.selectedFile, this.selectedFile.name);
     }
-    console.log(formData);
-    
-    this.brandService.create(formData).subscribe(response => {
-      console.log('Brand inserted successfully:', response);
-    });
+    if (this.id == null) {
+      this.brandService.create(formData).subscribe(response => {
+        console.log('Brand inserted successfully:', response);
+      });
+    }else{
+      formData.append('id', this.id.toString());
+      this.brandService.Update(formData).subscribe(response => {
+        console.log('Brand updated successfully:', response);
+      });
+    }
+
   }
 
   onFileSelected(event: any): void {

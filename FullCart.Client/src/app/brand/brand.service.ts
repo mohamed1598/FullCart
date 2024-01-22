@@ -16,4 +16,10 @@ export class BrandService {
   create(formData:FormData){
     return this.http.post(`${this.baseUrl}Brands`, formData);
   }
+  Update(formData:FormData){
+    return this.http.put(`${this.baseUrl}Brands`, formData);
+  }
+  Delete(id:number){
+    return this.http.delete(`${this.baseUrl}Brands?id=${id}`);
+  }
 }

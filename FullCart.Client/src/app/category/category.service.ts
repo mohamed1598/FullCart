@@ -15,4 +15,10 @@ export class CategoryService {
   create(formData:FormData){
     return this.http.post(`${this.baseUrl}Categories`, formData);
   }
+  Update(formData:FormData){
+    return this.http.put(`${this.baseUrl}Categories`, formData);
+  }
+  Delete(id:number){
+    return this.http.delete(`${this.baseUrl}Categories?id=${id}`);
+  }
 }

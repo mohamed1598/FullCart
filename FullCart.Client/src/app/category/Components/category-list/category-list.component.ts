@@ -9,12 +9,16 @@ import { CategoryService } from '../../category.service';
   styleUrls: ['./category-list.component.css']
 })
 export class CategoryListComponent {
+  selectedId : number|null = null;
   categories: ICategory[] = [];
   imageUrl = environment.imageUrl;
   constructor(private categoryService: CategoryService) { }
 
   ngOnInit(): void {
     this.updateCategoriesList();
+  }
+  updateId(id:number|null){
+    this.selectedId = id
   }
   updateCategoriesList(){
     this.categoryService.GetAll().subscribe({
@@ -29,5 +33,17 @@ export class CategoryListComponent {
     }
     );
   }
-  deleteCategory(id: number) { }
+  deleteCategory(id: number) {
+    this.categoryService.Delete(id).subscribe({
+      next:
+        (response: boolean | any) => {
+          this.updateCategoriesList();
+        },
+      error:
+        error => {
+          console.log(error)
+        }
+    }
+    );
+   }
 }

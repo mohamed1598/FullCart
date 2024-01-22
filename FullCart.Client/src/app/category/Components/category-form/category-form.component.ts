@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CategoryService } from '../../category.service';
 
@@ -8,10 +8,11 @@ import { CategoryService } from '../../category.service';
   styleUrls: ['./category-form.component.css']
 })
 export class CategoryFormComponent {
+  @Input() id: number | null = null;
   categoryForm: FormGroup;
   selectedFile: File | null = null; // Track the selected file
 
-  constructor(private fb: FormBuilder, private categoryService:CategoryService) {
+  constructor(private fb: FormBuilder, private categoryService: CategoryService) {
     this.categoryForm = this.fb.group({
       name: ['', Validators.required],
       picture: [null, Validators.required]
@@ -20,13 +21,22 @@ export class CategoryFormComponent {
 
   onSubmit(): void {
     let formData = new FormData();
+    console.log(this.categoryForm.value);
     formData.append('name', this.categoryForm.get('name')!.value);
     if (this.selectedFile) {
       formData.append('picture', this.selectedFile, this.selectedFile.name);
     }
-    this.categoryService.create(formData).subscribe(response => {
-      console.log('category inserted successfully:', response);
-    });
+    if (this.id == null) {
+      this.categoryService.create(formData).subscribe(response => {
+        console.log('Category inserted successfully:', response);
+      });
+    }else{
+      formData.append('id', this.id.toString());
+      this.categoryService.Update(formData).subscribe(response => {
+        console.log('Category updated successfully:', response);
+      });
+    }
+
   }
 
   onFileSelected(event: any): void {
