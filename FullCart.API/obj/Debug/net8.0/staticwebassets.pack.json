@@ -5,12 +5,12 @@
       "PackagePath": "staticwebassets\\images\\1da98b68-d30c-4955-991f-2623560ab621.jpg"
     },
     {
-      "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\27f7a4d4-7012-4fb8-ad9d-dd1dba0a737b.pdf",
-      "PackagePath": "staticwebassets\\images\\27f7a4d4-7012-4fb8-ad9d-dd1dba0a737b.pdf"
-    },
-    {
       "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\2f8f528e-2489-47e5-9387-72c5c1030e27.jpg",
       "PackagePath": "staticwebassets\\images\\2f8f528e-2489-47e5-9387-72c5c1030e27.jpg"
+    },
+    {
+      "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\33865769-8d38-4db8-9bd6-d93aba72c1f9.png",
+      "PackagePath": "staticwebassets\\images\\33865769-8d38-4db8-9bd6-d93aba72c1f9.png"
     },
     {
       "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\3e31165a-eb48-4439-ad16-f28aef024bf2.jpg",
@@ -25,6 +25,22 @@
       "PackagePath": "staticwebassets\\images\\41c8301f-a9b8-41f4-a413-10f8a42553fa.jpg"
     },
     {
+      "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\4e3f36eb-dd09-4ca9-9938-c159d7fb1f6e.png",
+      "PackagePath": "staticwebassets\\images\\4e3f36eb-dd09-4ca9-9938-c159d7fb1f6e.png"
+    },
+    {
+      "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\7a1c74ee-b8f2-47e1-93cf-be4256b1c42e.png",
+      "PackagePath": "staticwebassets\\images\\7a1c74ee-b8f2-47e1-93cf-be4256b1c42e.png"
+    },
+    {
+      "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\7edd03c5-eaa9-4070-800b-a8fea64f9060.png",
+      "PackagePath": "staticwebassets\\images\\7edd03c5-eaa9-4070-800b-a8fea64f9060.png"
+    },
+    {
+      "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\7f55dd5e-e27e-4c34-9678-e2efb1433e20.jpg",
+      "PackagePath": "staticwebassets\\images\\7f55dd5e-e27e-4c34-9678-e2efb1433e20.jpg"
+    },
+    {
       "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\b1bd64df-ca3d-4e1b-9858-45871cc2be76.jpg",
       "PackagePath": "staticwebassets\\images\\b1bd64df-ca3d-4e1b-9858-45871cc2be76.jpg"
     },
@@ -35,6 +51,14 @@
     {
       "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\bceda48b-5e1b-4ff9-b133-187cf40b090d.jpg",
       "PackagePath": "staticwebassets\\images\\bceda48b-5e1b-4ff9-b133-187cf40b090d.jpg"
+    },
+    {
+      "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\c0a747ff-fcb7-4099-8740-9b832d409d1a.jpg",
+      "PackagePath": "staticwebassets\\images\\c0a747ff-fcb7-4099-8740-9b832d409d1a.jpg"
+    },
+    {
+      "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\d4ee3295-2f1f-4d00-8696-29596f249e2a.jpg",
+      "PackagePath": "staticwebassets\\images\\d4ee3295-2f1f-4d00-8696-29596f249e2a.jpg"
     },
     {
       "Id": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\images\\fbb26417-53b6-4fcf-878a-a276adb2749b.jpg",

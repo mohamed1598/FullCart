@@ -17,6 +17,12 @@ namespace FullCart.API.Helpers
             CreateMap<Brand, BrandDto>();
             CreateMap<Category, CategoryDto>();
             CreateMap<CategoryInputModel, Category>();
+
+            CreateMap<Product, ProductDto>()
+             .ForMember(dest => dest.Brand, opt => opt.MapFrom(src => src.Brand.Name))
+             .ForMember(dest => dest.Category, opt => opt.MapFrom(src => src.Category.Name));
+
+            CreateMap<ProductInputModel, Product>();
         }
     }
 }
