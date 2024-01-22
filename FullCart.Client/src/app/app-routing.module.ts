@@ -4,7 +4,8 @@ import { LoginComponent } from './account/login/login.component';
 
 const routes: Routes = [
   {path:'account',loadChildren:()=> import('./account/account.module').then(mod =>mod.AccountModule)},
-  {path:'',loadChildren:()=> import('./brand/brand.module').then(mod =>mod.BrandModule)}
+  {path:'',loadChildren:()=> import('./brand/brand.module').then(mod =>mod.BrandModule)},
+  {path:'category',loadChildren:()=> import('./category/category.module').then(mod =>mod.CategoryModule)}
 ];
 
 @NgModule({

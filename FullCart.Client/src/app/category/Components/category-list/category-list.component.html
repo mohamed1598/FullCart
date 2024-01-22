@@ -1,6 +1,6 @@
 <div class="container mt-4">
     <div class="d-flex align-items-center justify-content-between w-100">
-        <h2>Brand List</h2>
+        <h2>Category List</h2>
         <button class="btn btn-primary btn-large" data-bs-toggle="modal" data-bs-target="#exampleModal">Create</button>
     </div>
     <div class="table-responsive">
@@ -14,15 +14,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let brand of brands">
-            <td>{{ brand.id }}</td>
-            <td>{{ brand.name }}</td>
+          <tr *ngFor="let category of categories">
+            <td>{{ category.id }}</td>
+            <td>{{ category.name }}</td>
             <td>
-              <img [src]="imageUrl+brand.pictureUrl" alt="{{ brand.name }}" style="max-width: 50px; max-height: 50px;">
+              <img [src]="imageUrl+category.pictureUrl" alt="{{ category.name }}" style="max-width: 50px; max-height: 50px;">
             </td>
             <td>
               <button class="btn btn-primary btn-sm mx-2">Edit</button>
-              <button class="btn btn-danger btn-sm" (click)="deleteBrand(brand.id)">Delete</button>
+              <button class="btn btn-danger btn-sm" (click)="deleteCategory(category.id)">Delete</button>
             </td>
           </tr>
         </tbody>
@@ -38,7 +38,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <app-brand-form></app-brand-form>
+          <app-category-form></app-category-form>
         </div>
       </div>
     </div>

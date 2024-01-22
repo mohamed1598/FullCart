@@ -1,14 +1,14 @@
 <div class="container my-4">
-    <h2 class="text-center">Insert Brand</h2>
-    <form [formGroup]="brandForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+    <h2 class="text-center">Insert Category</h2>
+    <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
       <app-text-input formControlName="name" [label]="'Name'"></app-text-input>
       <div class="form-group my-4">
         <label for="picture">Picture:</label>
         <input type="file" class="form-control" id="picture" (change)="onFileSelected($event)" formControlName="picture" accept="image/*">
-        <div *ngIf="brandForm.get('picture')!.hasError('required') && brandForm.get('picture')!.touched">
+        <div *ngIf="categoryForm.get('picture')!.hasError('required') && categoryForm.get('picture')!.touched">
           Picture is required
         </div>
       </div>
-      <button type="submit" class="btn btn-primary form-control" [disabled]="brandForm.invalid">Insert Brand</button>
+      <button type="submit" class="btn btn-primary form-control" [disabled]="categoryForm.invalid">Insert Brand</button>
     </form>
   </div>

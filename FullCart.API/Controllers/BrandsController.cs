@@ -4,6 +4,7 @@ using FullCart.API.Dtos.InputModels;
 using FullCart.Core.Consts;
 using FullCart.Core.Entities;
 using FullCart.Core.Interfaces;
+using FullCart.Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,7 +14,7 @@ namespace FullCart.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize(Roles =AppRoles.Admin)]
+    [Authorize(Roles = AppRoles.Admin)]
     public class BrandsController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -24,73 +25,68 @@ namespace FullCart.API.Controllers
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-        [AllowAnonymous]
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<Brand>>> GetBrands()
+        public async Task<ActionResult<IReadOnlyList<BrandDto>>> GetBrands()
         {
             var brands = await _unitOfWork.Repository<Brand>().GetAllAsync();
-            return Ok(brands);
+            var brandsDto = _mapper.Map<IReadOnlyList<BrandDto>>(brands);
+            return Ok(brandsDto);
         }
         [HttpPost, DisableRequestSizeLimit]
-        public async Task<ActionResult<Brand>> CreateBrand([FromForm]BrandInputModel brandInput)
+        public async Task<ActionResult<Brand>> CreateBrand([FromForm] BrandInputModel brandInput)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
             string pictureUrl = string.Empty;
-            if(brandInput.Picture != null) 
-                pictureUrl = await UploadFile(brandInput.Picture);
+            if (brandInput.Picture != null)
+                pictureUrl = await FileService.UploadFile(brandInput.Picture);
             var brand = _mapper.Map<Brand>(brandInput);
             brand.PictureUrl = pictureUrl;
             _unitOfWork.Repository<Brand>().Add(brand);
             await _unitOfWork.Complete();
-            return Ok(brand);
+            var brandDto = _mapper.Map<BrandDto>(brand);
+            return Ok(brandDto);
         }
         [HttpPut]
-        public async Task<ActionResult<Brand>> UpdateBrand(BrandDto brandDto)
+        public async Task<ActionResult<Brand>> UpdateBrand([FromForm] BrandInputModel brandInput)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-
-            var brand = await _unitOfWork.Repository<Brand>().GetByIdAsync(brandDto.Id);
-            brand = _mapper.Map<Brand>(brandDto);
+            if (brandInput.Id is null) return BadRequest();
+            string pictureUrl = string.Empty;
+            var oldPicture = _unitOfWork.Repository<Brand>().GetByIdAsNoTrackingAsync((int)brandInput.Id!).Result!.PictureUrl;
+            if (brandInput.Picture != null)
+            {
+                FileService.DeleteFile(oldPicture);
+                pictureUrl = await FileService.UploadFile(brandInput.Picture);
+            }
+            else if (brandInput.RemoveImage != true)
+                pictureUrl = oldPicture;
+            else
+                FileService.DeleteFile(oldPicture);
+            var brand = _mapper.Map<Brand>(brandInput);
+            brand.PictureUrl = pictureUrl;
+            _unitOfWork.Repository<Brand>().Update(brand);
             await _unitOfWork.Complete();
-            return Ok(brand);
+            var brandDto = _mapper.Map<BrandDto>(brand);
+            return Ok(brandDto);
         }
         [HttpDelete]
         public async Task<ActionResult<bool>> DeleteBrand(int id)
         {
             var brand = await _unitOfWork.Repository<Brand>().GetByIdAsync(id);
             if (brand == null) return BadRequest(false);
+            if (brand.PictureUrl != string.Empty)
+            {
+                FileService.DeleteFile(brand.PictureUrl);
+            }
             _unitOfWork.Repository<Brand>().Delete(brand);
             await _unitOfWork.Complete();
             return Ok(true);
-        }
-        // Method to handle file upload
-        private async Task<string> UploadFile(IFormFile file)
-        {
-            if (file == null || file.Length == 0)
-            {
-                return null;
-            }
-
-            // Generate a unique file name
-            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-
-            // Define the file path
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", fileName);
-
-            // Save the file to the server
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-
-            // Return the file URL
-            return "/images/" + fileName;
         }
     }
 }

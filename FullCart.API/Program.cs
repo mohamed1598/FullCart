@@ -32,10 +32,12 @@ builder.Services.AddAuthentication(options => {
                 {
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
+                        ValidateIssuer = true,
+                        ValidateAudience = false,
+                        ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:Key"]!)),
                         ValidIssuer = builder.Configuration["Token:Issuer"],
-                        ValidateAudience = false
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:Key"]!))
                     };
                 });
 builder.Services.AddScoped<ITokenService, TokenService>();

@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using FullCart.API.Dtos;
 using FullCart.API.Dtos.InputModels;
-using FullCart.API.Services;
 using FullCart.Core.Consts;
 using FullCart.Core.Entities;
 using FullCart.Core.Interfaces;
+using FullCart.Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -35,7 +35,7 @@ namespace FullCart.API.Controllers
             return Ok(categoriesDto);
         }
 
-        [HttpPost]
+        [HttpPost, DisableRequestSizeLimit]
         public async Task<ActionResult<CategoryDto>> CreateCategory([FromForm] CategoryInputModel categoryInput)
         {
             if (!ModelState.IsValid)
