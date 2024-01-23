@@ -9,12 +9,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
 
 namespace FullCart.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = AppRoles.Admin)]
+    //[Authorize(Roles = AppRoles.Admin)]
     public class BrandsController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -87,6 +88,35 @@ namespace FullCart.API.Controllers
             _unitOfWork.Repository<Brand>().Delete(brand);
             await _unitOfWork.Complete();
             return Ok(true);
+        }
+
+        [HttpPost("Import")]
+        public async Task<ActionResult<bool>> ImportBrands(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return BadRequest(false);
+            }
+            await _unitOfWork.Repository<Brand>().AddOrUpdateBulk(GetBrandsFromExcel(file));
+            return Ok(true);
+        }
+        private IEnumerable<Brand> GetBrandsFromExcel(IFormFile file)
+        {
+            using var package = new ExcelPackage(file.OpenReadStream());
+            var worksheet = package.Workbook.Worksheets[0];
+
+            List<Brand> brandList = new List<Brand>();
+
+            for (int row = 2; row <= worksheet.Dimension.Rows; row++)
+            {
+                brandList.Add(new Brand
+                {
+                    Id = int.Parse((worksheet.Cells[row, 1].Value ?? "0").ToString()),
+                    Name = (worksheet.Cells[row, 2].Value ?? "").ToString(),
+                    PictureUrl = (worksheet.Cells[row, 3].Value ?? "").ToString()
+                });
+            }
+            return brandList;
         }
     }
 }
