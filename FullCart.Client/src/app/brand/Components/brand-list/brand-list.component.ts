@@ -20,6 +20,11 @@ export class BrandListComponent {
   updateId(id:number|null){
     this.selectedId = id
   }
+  updateData(modified:boolean){
+    if(modified){
+      this.updateBrandsList();
+    }
+  }
   updateBrandsList(){
     this.brandService.GetAll().subscribe({
       next:
@@ -46,4 +51,5 @@ export class BrandListComponent {
     }
     );
   }
+
 }

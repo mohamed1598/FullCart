@@ -21,4 +21,7 @@ export class ProductService {
   Delete(id:number){
     return this.http.delete(`${this.baseUrl}Products?id=${id}`);
   }
+  uploadFile(formData:FormData){
+    return this.http.post(`${this.baseUrl}Products/Import`, formData);
+  }
 }

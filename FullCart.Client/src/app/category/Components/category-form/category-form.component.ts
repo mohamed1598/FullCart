@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CategoryService } from '../../category.service';
 
@@ -8,6 +8,8 @@ import { CategoryService } from '../../category.service';
   styleUrls: ['./category-form.component.css']
 })
 export class CategoryFormComponent {
+  @Output() dataModified: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @ViewChild('closeModal') closeModal: ElementRef|any;
   @Input() id: number | null = null;
   categoryForm: FormGroup;
   selectedFile: File | null = null; // Track the selected file
@@ -28,17 +30,22 @@ export class CategoryFormComponent {
     }
     if (this.id == null) {
       this.categoryService.create(formData).subscribe(response => {
+        this.displayDataModified();
         console.log('Category inserted successfully:', response);
       });
     }else{
       formData.append('id', this.id.toString());
       this.categoryService.Update(formData).subscribe(response => {
+        this.displayDataModified();
         console.log('Category updated successfully:', response);
       });
     }
 
   }
-
+  displayDataModified(){
+    this.closeModal.nativeElement.click();
+    this.dataModified.emit(true);
+  }
   onFileSelected(event: any): void {
     const fileInput = event.target as HTMLInputElement;
     if (fileInput.files && fileInput.files.length > 0) {

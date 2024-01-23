@@ -33,6 +33,12 @@ export class ProductListComponent {
     }
     );
   }
+  
+  updateData(modified:boolean){
+    if(modified){
+      this.updateProductsList();
+    }
+  }
   deleteProduct(id: number) { 
     this.productService.Delete(id).subscribe({
       next:

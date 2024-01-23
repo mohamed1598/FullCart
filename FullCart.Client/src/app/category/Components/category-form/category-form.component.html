@@ -10,5 +10,6 @@
         </div>
       </div>
       <button type="submit" class="btn btn-primary form-control" [disabled]="categoryForm.invalid">{{id == null?"Insert":"Edit"}} Category</button>
+      <button #closeModal type="button" class="d-none" data-bs-dismiss="modal">Close</button>
     </form>
   </div>

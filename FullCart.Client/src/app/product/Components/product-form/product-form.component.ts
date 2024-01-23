@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from '../../product.service';
 
@@ -8,6 +8,8 @@ import { ProductService } from '../../product.service';
   styleUrls: ['./product-form.component.css']
 })
 export class ProductFormComponent {
+  @Output() dataModified: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @ViewChild('closeModal') closeModal: ElementRef|any;
   @Input() id: number | null = null;
   productForm: FormGroup;
   selectedFile: File | null = null; // Track the selected file
@@ -35,14 +37,20 @@ export class ProductFormComponent {
     if (this.id == null) {
       this.productService.create(formData).subscribe(response => {
         console.log('Product inserted successfully:', response);
+        this.displayDataModified();
       });
     }else{
       formData.append('id', this.id.toString());
       this.productService.Update(formData).subscribe(response => {
         console.log('Product updated successfully:', response);
+        this.displayDataModified();
       });
     }
 
+  }
+  displayDataModified(){
+    this.closeModal.nativeElement.click();
+    this.dataModified.emit(true);
   }
 
   onFileSelected(event: any): void {

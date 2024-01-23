@@ -46,4 +46,10 @@ export class CategoryListComponent {
     }
     );
    }
+   
+  updateData(modified:boolean){
+    if(modified){
+      this.updateCategoriesList();
+    }
+  }
 }

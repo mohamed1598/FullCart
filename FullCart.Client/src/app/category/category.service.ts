@@ -21,4 +21,7 @@ export class CategoryService {
   Delete(id:number){
     return this.http.delete(`${this.baseUrl}Categories?id=${id}`);
   }
+  uploadFile(formData:FormData){
+    return this.http.post(`${this.baseUrl}Categories/Import`, formData);
+  }
 }

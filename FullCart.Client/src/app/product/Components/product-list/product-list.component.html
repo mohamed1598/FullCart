@@ -36,7 +36,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-body">
-          <app-product-form [id]="selectedId"></app-product-form>
+          <app-product-form [id]="selectedId" (dataModified)="updateData($event)"></app-product-form>
         </div>
       </div>
     </div>

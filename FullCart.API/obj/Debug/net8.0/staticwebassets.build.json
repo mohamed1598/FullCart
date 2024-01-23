@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CYZ40Xoj3jX3zpd7DmqEBpvSCQ2VWZn8WbmaZPD7RnQ=",
+  "Hash": "n1wgfI3Tz1RX4cxsXIHuc0BY/KJK1ryQB2AnZ5svgh0=",
   "Source": "FullCart.API",
   "BasePath": "_content/FullCart.API",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "FullCart.API\\wwwroot",
       "Source": "FullCart.API",
-      "ContentRoot": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\wwwroot\\",
+      "ContentRoot": "D:\\New folder\\New folder\\cart\\FullCart.API\\wwwroot\\",
       "BasePath": "_content/FullCart.API",
       "Pattern": "**"
     }

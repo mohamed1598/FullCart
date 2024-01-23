@@ -22,4 +22,7 @@ export class BrandService {
   Delete(id:number){
     return this.http.delete(`${this.baseUrl}Brands?id=${id}`);
   }
+  uploadFile(formData:FormData){
+    return this.http.post(`${this.baseUrl}Brands/Import`, formData);
+  }
 }
