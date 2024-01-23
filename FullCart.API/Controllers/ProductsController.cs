@@ -8,6 +8,7 @@ using FullCart.Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OfficeOpenXml;
 
 namespace FullCart.API.Controllers
 {
@@ -87,6 +88,37 @@ namespace FullCart.API.Controllers
             _unitOfWork.Repository<Product>().Delete(product);
             await _unitOfWork.Complete();
             return Ok(true);
+        }
+
+        [HttpPost("Import")]
+        public async Task<ActionResult<bool>> ImportCategories(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return BadRequest(false);
+            }
+            await _unitOfWork.Repository<Product>().AddOrUpdateBulk(GetProductsFromExcel(file));
+            return Ok(true);
+        }
+        private IEnumerable<Product> GetProductsFromExcel(IFormFile file)
+        {
+            using var package = new ExcelPackage(file.OpenReadStream());
+            var worksheet = package.Workbook.Worksheets[0];
+            List<Product> productList = [];
+            for (int row = 2; row <= worksheet.Dimension.Rows; row++)
+            {
+                productList.Add(new Product
+                {
+                    Id = int.Parse((worksheet.Cells[row, 1].Value ?? "0").ToString()),
+                    Name = (worksheet.Cells[row, 2].Value ?? "").ToString(),
+                    Description = (worksheet.Cells[row, 3].Value ?? "").ToString(),
+                    Price = decimal.Parse((worksheet.Cells[row, 4].Value ?? "0.0").ToString()),
+                    PictureUrl = (worksheet.Cells[row, 3].Value ?? "").ToString(),
+                    BrandId = int.Parse((worksheet.Cells[row, 4].Value ?? "0").ToString()),
+                    CategoryId = int.Parse((worksheet.Cells[row, 5].Value ?? "0").ToString())
+                });
+            }
+            return productList;
         }
     }
 }

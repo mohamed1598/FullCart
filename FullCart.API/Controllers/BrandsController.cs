@@ -15,7 +15,7 @@ namespace FullCart.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize(Roles = AppRoles.Admin)]
+    [Authorize(Roles = AppRoles.Admin)]
     public class BrandsController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;

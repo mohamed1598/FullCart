@@ -8,6 +8,7 @@ using FullCart.Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OfficeOpenXml;
 using System.IO;
 
 namespace FullCart.API.Controllers
@@ -92,6 +93,35 @@ namespace FullCart.API.Controllers
             _unitOfWork.Repository<Category>().Delete(category);
             await _unitOfWork.Complete();
             return Ok(true);
+        }
+
+        [HttpPost("Import")]
+        public async Task<ActionResult<bool>> ImportCategories(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return BadRequest(false);
+            }
+            await _unitOfWork.Repository<Category>().AddOrUpdateBulk(GetCateogriesFromExcel(file));
+            return Ok(true);
+        }
+        private IEnumerable<Category> GetCateogriesFromExcel(IFormFile file)
+        {
+            using var package = new ExcelPackage(file.OpenReadStream());
+            var worksheet = package.Workbook.Worksheets[0];
+
+            List<Category> categoryList = [];
+
+            for (int row = 2; row <= worksheet.Dimension.Rows; row++)
+            {
+                categoryList.Add(new Category
+                {
+                    Id = int.Parse((worksheet.Cells[row, 1].Value ?? "0").ToString()),
+                    Name = (worksheet.Cells[row, 2].Value ?? "").ToString(),
+                    PictureUrl = (worksheet.Cells[row, 3].Value ?? "").ToString()
+                });
+            }
+            return categoryList;
         }
     }
 }
