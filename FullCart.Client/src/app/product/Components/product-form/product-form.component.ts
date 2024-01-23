@@ -30,7 +30,7 @@ export class ProductFormComponent {
     formData.append('description', this.productForm.get('description')!.value);
     formData.append('price', this.productForm.get('price')!.value);
     formData.append('brandId', '5');
-    formData.append('categoryId', '6');
+    formData.append('categoryId', '10');
     if (this.selectedFile) {
       formData.append('picture', this.selectedFile, this.selectedFile.name);
     }

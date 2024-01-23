@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FullCart.Core
-build_property.ProjectDir = D:\New folder\New folder\cart\FullCart.Core\
+build_property.ProjectDir = D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

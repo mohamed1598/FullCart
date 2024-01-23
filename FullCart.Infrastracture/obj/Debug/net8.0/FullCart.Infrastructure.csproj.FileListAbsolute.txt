@@ -1,21 +1,3 @@
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Infrastructure.deps.json
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Infrastructure.runtimeconfig.json
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Infrastructure.dll
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Infrastructure.pdb
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Core.dll
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Core.pdb
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.csproj.AssemblyReference.cache
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.AssemblyInfoInputs.cache
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.AssemblyInfo.cs
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.csproj.CoreCompileInputs.cache
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.sourcelink.json
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.csproj.CopyComplete
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.dll
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\refint\FullCart.Infrastructure.dll
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.pdb
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.genruntimeconfig.cache
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\ref\FullCart.Infrastructure.dll
 D:\New folder\New folder\cart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Infrastructure.deps.json
 D:\New folder\New folder\cart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Infrastructure.runtimeconfig.json
 D:\New folder\New folder\cart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Infrastructure.dll
@@ -34,3 +16,21 @@ D:\New folder\New folder\cart\FullCart.Infrastracture\obj\Debug\net8.0\refint\Fu
 D:\New folder\New folder\cart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.pdb
 D:\New folder\New folder\cart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.genruntimeconfig.cache
 D:\New folder\New folder\cart\FullCart.Infrastracture\obj\Debug\net8.0\ref\FullCart.Infrastructure.dll
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Infrastructure.deps.json
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Infrastructure.runtimeconfig.json
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Infrastructure.dll
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Infrastructure.pdb
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Core.dll
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\bin\Debug\net8.0\FullCart.Core.pdb
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.csproj.AssemblyReference.cache
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.AssemblyInfoInputs.cache
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.AssemblyInfo.cs
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.csproj.CoreCompileInputs.cache
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.sourcelink.json
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.csproj.CopyComplete
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.dll
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\refint\FullCart.Infrastructure.dll
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.pdb
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\FullCart.Infrastructure.genruntimeconfig.cache
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Infrastracture\obj\Debug\net8.0\ref\FullCart.Infrastructure.dll

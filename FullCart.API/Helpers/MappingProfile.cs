@@ -23,6 +23,9 @@ namespace FullCart.API.Helpers
              .ForMember(dest => dest.Category, opt => opt.MapFrom(src => src.Category.Name));
 
             CreateMap<ProductInputModel, Product>();
+
+            CreateMap<CartItemInputModel, CartItem>();
+            CreateMap<Cart, CartDto>();
         }
     }
 }

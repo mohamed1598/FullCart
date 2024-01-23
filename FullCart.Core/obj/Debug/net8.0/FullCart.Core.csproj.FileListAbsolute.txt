@@ -1,16 +1,3 @@
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\bin\Debug\net8.0\FullCart.Core.deps.json
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\bin\Debug\net8.0\FullCart.Core.dll
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\bin\Debug\net8.0\FullCart.Core.pdb
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.csproj.AssemblyReference.cache
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.GeneratedMSBuildEditorConfig.editorconfig
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.AssemblyInfoInputs.cache
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.AssemblyInfo.cs
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.csproj.CoreCompileInputs.cache
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.sourcelink.json
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.dll
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\refint\FullCart.Core.dll
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.pdb
-D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\ref\FullCart.Core.dll
 D:\New folder\New folder\cart\FullCart.Core\bin\Debug\net8.0\FullCart.Core.deps.json
 D:\New folder\New folder\cart\FullCart.Core\bin\Debug\net8.0\FullCart.Core.dll
 D:\New folder\New folder\cart\FullCart.Core\bin\Debug\net8.0\FullCart.Core.pdb
@@ -24,3 +11,16 @@ D:\New folder\New folder\cart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.dll
 D:\New folder\New folder\cart\FullCart.Core\obj\Debug\net8.0\refint\FullCart.Core.dll
 D:\New folder\New folder\cart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.pdb
 D:\New folder\New folder\cart\FullCart.Core\obj\Debug\net8.0\ref\FullCart.Core.dll
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\bin\Debug\net8.0\FullCart.Core.deps.json
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\bin\Debug\net8.0\FullCart.Core.dll
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\bin\Debug\net8.0\FullCart.Core.pdb
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.csproj.AssemblyReference.cache
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.AssemblyInfoInputs.cache
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.AssemblyInfo.cs
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.csproj.CoreCompileInputs.cache
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.sourcelink.json
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.dll
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\refint\FullCart.Core.dll
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\FullCart.Core.pdb
+D:\tasks\csharp\.NET CORE\FullCart\FullCart.Core\obj\Debug\net8.0\ref\FullCart.Core.dll

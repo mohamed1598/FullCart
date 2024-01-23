@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
 using FullCart.API.Dtos;
 using FullCart.API.Dtos.InputModels;
+using FullCart.API.Helpers;
 using FullCart.Core.Consts;
 using FullCart.Core.Entities;
 using FullCart.Core.Interfaces;
+using FullCart.Core.Specifications;
 using FullCart.Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -27,11 +29,14 @@ namespace FullCart.API.Controllers
         }
         [AllowAnonymous]
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<ProductDto>>> GetBrands()
+        public async Task<ActionResult<Pagination<ProductDto>>> GetProducts([FromQuery] ProductSpecParams productParams)
         {
-            var products = await _unitOfWork.Repository<Product>().GetAllAsync();
-            var productsDto = _mapper.Map<IReadOnlyList<ProductDto>>(products);
-            return Ok(productsDto);
+            var spec = new ProductsWithCategoriesAndBrandsSpecifications(productParams);
+            var countSpec = new ProductWithFiltersForCountSpecification(productParams);
+            var totalItems = await _unitOfWork.Repository<Product>().CountAsync(countSpec);
+            var products = await _unitOfWork.Repository<Product>().ListAsync(spec);
+            var data = _mapper.Map<IReadOnlyList<ProductDto>>(products);
+            return Ok(new Pagination<ProductDto>(productParams.PageIndex, productParams.PageSize, totalItems, data));
         }
         [HttpPost, DisableRequestSizeLimit]
         public async Task<ActionResult<Product>> CreateProduct([FromForm] ProductInputModel productInput)

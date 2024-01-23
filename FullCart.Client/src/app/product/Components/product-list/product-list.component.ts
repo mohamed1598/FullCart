@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IProduct } from 'src/app/models/product';
 import { environment } from 'src/environments/environment';
 import { ProductService } from '../../product.service';
+import { ProductParams } from 'src/app/models/productParams';
+import { IPagination } from 'src/app/models/pagination';
 
 @Component({
   selector: 'app-product-list',
@@ -12,6 +14,14 @@ export class ProductListComponent {
   products: IProduct[] = [];
   imageUrl = environment.imageUrl;
   selectedId : number|null = null;
+  productParams:ProductParams={
+    pageIndex :1,
+    pageSize :6,
+    brandId:0,
+    typeId:0,
+    sort:'name',
+    search:''
+  };
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
@@ -21,11 +31,13 @@ export class ProductListComponent {
     this.selectedId = id
   }
   updateProductsList(){
-    this.productService.GetAll().subscribe({
+    this.productService.GetAll(this.productParams).subscribe({
       next:
-        (response: IProduct[] | any) => {
-          this.products = response!;
-        },
+      (response:IPagination|null) =>{
+        this.products = response!.data;
+        this.productParams.pageIndex = response!.pageIndex;
+        this.productParams.pageSize = response!.pageSize;
+      },
       error:
         error => {
           console.log(error)

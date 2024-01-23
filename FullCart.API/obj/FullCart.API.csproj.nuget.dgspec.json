@@ -1,41 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "D:\\New folder\\New folder\\cart\\FullCart.API\\FullCart.API.csproj": {}
+    "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\FullCart.API.csproj": {}
   },
   "projects": {
-    "D:\\New folder\\New folder\\cart\\FullCart.API\\FullCart.API.csproj": {
+    "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\FullCart.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\New folder\\New folder\\cart\\FullCart.API\\FullCart.API.csproj",
+        "projectUniqueName": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\FullCart.API.csproj",
         "projectName": "FullCart.API",
-        "projectPath": "D:\\New folder\\New folder\\cart\\FullCart.API\\FullCart.API.csproj",
-        "packagesPath": "C:\\Users\\MohamedIB\\.nuget\\packages\\",
-        "outputPath": "D:\\New folder\\New folder\\cart\\FullCart.API\\obj\\",
+        "projectPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\FullCart.API.csproj",
+        "packagesPath": "C:\\Users\\Mohamed Elshafey\\.nuget\\packages\\",
+        "outputPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\MohamedIB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mohamed Elshafey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\New folder\\New folder\\cart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj": {
-                "projectPath": "D:\\New folder\\New folder\\cart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj"
+              "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj": {
+                "projectPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj"
               }
             }
           }
@@ -49,44 +48,76 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.0.7, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\New folder\\New folder\\cart\\FullCart.Core\\FullCart.Core.csproj": {
+    "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Core\\FullCart.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\New folder\\New folder\\cart\\FullCart.Core\\FullCart.Core.csproj",
+        "projectUniqueName": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Core\\FullCart.Core.csproj",
         "projectName": "FullCart.Core",
-        "projectPath": "D:\\New folder\\New folder\\cart\\FullCart.Core\\FullCart.Core.csproj",
-        "packagesPath": "C:\\Users\\MohamedIB\\.nuget\\packages\\",
-        "outputPath": "D:\\New folder\\New folder\\cart\\FullCart.Core\\obj\\",
+        "projectPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Core\\FullCart.Core.csproj",
+        "packagesPath": "C:\\Users\\Mohamed Elshafey\\.nuget\\packages\\",
+        "outputPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\MohamedIB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mohamed Elshafey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -104,52 +135,63 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\New folder\\New folder\\cart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj": {
+    "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\New folder\\New folder\\cart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj",
+        "projectUniqueName": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj",
         "projectName": "FullCart.Infrastructure",
-        "projectPath": "D:\\New folder\\New folder\\cart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\MohamedIB\\.nuget\\packages\\",
-        "outputPath": "D:\\New folder\\New folder\\cart\\FullCart.Infrastracture\\obj\\",
+        "projectPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\FullCart.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Mohamed Elshafey\\.nuget\\packages\\",
+        "outputPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Infrastracture\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\MohamedIB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mohamed Elshafey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\New folder\\New folder\\cart\\FullCart.Core\\FullCart.Core.csproj": {
-                "projectPath": "D:\\New folder\\New folder\\cart\\FullCart.Core\\FullCart.Core.csproj"
+              "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Core\\FullCart.Core.csproj": {
+                "projectPath": "D:\\tasks\\csharp\\.NET CORE\\FullCart\\FullCart.Core\\FullCart.Core.csproj"
               }
             }
           }
@@ -163,17 +205,47 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "EFCore.BulkExtensions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
