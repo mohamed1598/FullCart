@@ -17,6 +17,7 @@ namespace FullCart.Core.Interfaces
         Task<IReadOnlyList<T>> ListAsync(ISpecifications<T> spec);
         Task<int> CountAsync(ISpecifications<T> spec);
         void Add(T entity);
+        Task AddOrUpdateBulk(IEnumerable<T> entity);
         void Update(T entity);
         void Delete(T entity);
     }

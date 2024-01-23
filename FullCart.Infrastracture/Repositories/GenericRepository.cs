@@ -1,4 +1,5 @@
-﻿using FullCart.Core.Entities;
+﻿using EFCore.BulkExtensions;
+using FullCart.Core.Entities;
 using FullCart.Core.Interfaces;
 using FullCart.Core.Specifications;
 using FullCart.Infrastructure.Data;
@@ -22,6 +23,10 @@ namespace FullCart.Infrastructure.Repositories
         public void Add(T entity)
         {
             _context.Set<T>().Add(entity);
+        }
+        public async Task AddOrUpdateBulk(IEnumerable<T> entity)
+        {
+            await _context.BulkInsertOrUpdateAsync(entity);
         }
 
         public async Task<int> CountAsync(ISpecifications<T> spec)
